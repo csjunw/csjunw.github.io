@@ -152,6 +152,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-is-here" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/03/is-here/">is here</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/03/is-here/" class="archive-article-date">
+  	<time datetime="2021-05-03T10:50:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="数据库索引"><a href="#数据库索引" class="headerlink" title="数据库索引"></a>数据库索引</h2><blockquote>
+<p>一个数据块4K存储的行数取决于什么？</p>
+</blockquote>
+<ol>
+<li>取决于存储的基本表是胖表还是瘦表，对应的是字段的数量和每个字段的长度 </li>
+</ol>
+<blockquote>
+<p>索引是什么？</p>
+</blockquote>
+<ol>
+<li>从结构上看，它是一个数据结构。</li>
+<li>从功能上看，它知识一个访问数据库的手段，是以细粒度的方式访问数据的，是为了直接读取记录的，而不是为了检索大量数据的。</li>
+<li>索引是指向一块数据块，而目录是指向一个页。</li>
+</ol>
+<blockquote>
+<p>索引真的会让所有查询变的更快么？</p>
+</blockquote>
+<ol>
+<li>如果整张表很小，基本表本身只有四个块。直接去查基本表，运气最差也只会进行四次系统IO,平均下来只需要两次IO就可以查询到我们需要的数据了。如果给这种表建立索引，会增加查询的步骤，增加开销。</li>
+<li>如果是范围查询，绝对一点得全表查询，查询索引只会增加开销。它会从头遍历索引结构得叶子节点，然后从这些叶子节点拿到所有数据的地址，再去基本表找到所对应的块。应该直接遍历基本表，才是正确的做法。</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/03/is-here/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
